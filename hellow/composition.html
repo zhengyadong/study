@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../vue-next/packages/vue/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const {
+            createApp,
+            reactive,
+            watchEffect
+        } = Vue
+        const App = {
+            template:`<button @click="click">{{state.message}}</button>`,
+            setup() {
+                const state = reactive({
+                    message:'hell vue 3'
+                })
+                watchEffect(()=>{
+                    console.log('message',state.message);
+                })
+                function click() {
+                    state.message = state.message.split('').reverse().join('')
+                }
+                return {
+                    state,
+                    click
+                }
+            }
+        }
+        createApp(App).mount('#app')
+    </script>
+</body>
+</html>

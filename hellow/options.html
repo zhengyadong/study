@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../vue-next/packages/vue/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const App = {
+            template:`<button @click="click">{{message}}</button>`,
+            data() {
+                return {
+                    message:'hellow vue 3'
+                }
+            },
+            methods:{
+                click() {
+                    this.message = this.message.split('').reverse().join('')
+                }
+            }
+        }
+
+        const vm = Vue.createApp(App).mount('#app')
+    </script>
+</body>
+</html>
