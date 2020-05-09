@@ -1,0 +1,8 @@
+#app .navbar .site-name:before{
+    display: inline-block;
+    content: '';
+    width: 3rem;
+    height: 2.4rem;
+    background: url('../img/logo.png') no-repeat;
+    vertical-align: middle;
+}

@@ -1,7 +1,7 @@
 module.exports = {
     title: 'vue3.0学习总结',  // 设置网站标题
     description : 'vue3.0',
-    dest:'./dist',  // 默认在.vuepress目录下
+    dest:'',  // 默认在.vuepress目录下
     base : '/study/',
     head:[
         ['link', {rel:'icon',href:'/logo.jpg'}],
